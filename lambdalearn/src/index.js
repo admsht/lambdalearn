@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Octokit } from "@octokit/core";
 
 import Header from './components/Header'
 import Hero from './components/Hero'
+import TrendingRepo from './components/TrendingRepo'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +15,7 @@ root.render(
     <Header />
     <Hero />
     <App />
+    <TrendingRepo />
   </React.StrictMode>
 );
 
