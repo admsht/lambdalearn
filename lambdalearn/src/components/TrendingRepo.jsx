@@ -102,7 +102,7 @@ const TrendingRepo = () => {
             </select>
         </label>
             {error ? <h2>Error happened{error}</h2> :
-                data.map(val => renderData(val))}
+                Items.map(val => renderData(val))}
 
         </>
 
