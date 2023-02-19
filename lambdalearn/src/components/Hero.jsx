@@ -1,6 +1,6 @@
 function Hero() {
     return (
-        <section className="bg-gray-900 h-screen">
+        <section className="bg-gray-900 rounded-b-3xl">
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto">
                 <div className="mr-auto">
                     <h1 className="max-w-2xl mb-4 text-6xl text-white font-extrabold tracking-tight leading-none">Stay up to date with the latest in <a className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">free coding resources.</a></h1>
@@ -27,7 +27,7 @@ function Hero() {
                     </section>
 
 
-                    <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                    <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-800 duration-300">
                         Get started
                     </a>
                 </div>
