@@ -24,7 +24,7 @@ const TrendingRepo = () => {
 
         setIsLoading(true);
         const octokit = new Octokit({
-            auth: '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'
+            auth: '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'
           });
     
         try {
@@ -97,21 +97,22 @@ const TrendingRepo = () => {
 
     return (
         <>
-        {/* Header */}
-        <div className="bg-gray-900" style={{display:"flex",justifyContent:"space-between",position:"sticky"}}>
-                       <div style={{backgroundColor:"blue"}}> 
-                        Lambda Learn
-                        </div>
-                            <div style={{backgroundColor:"green",padding:"12px"}}>
-                            <label>
-                            Language
-                           <select style={{paddingBottom:"24px"}}  name="lang-dropdown" value={lang} onChange={handleLangChange}>
-                             {options.map((option)=> (<option value={option.value}>{option.label}</option>))}
-                            </select>
-                            </label>
+            {/* Header */}
+            <div className='sticky bg-gray-900'>
+                <div className='max-w-2xl max-w-screen-xl py-2 mr-auto mx-auto'>
+                    <header className="max-w-screen-xl">
+                        <nav className="px-4">
+                            <div className="flow-root mx-auto max-w-screen-2xl mr-auto">
+                                <a className="flex items-center pt-2 self-center text-white text-2xl font-bold">Lambda Learn</a>
                             </div>
-        </div>
-        {/* <div className='sticky top-0 max-w-screen px-4 py-2 mx-auto'>
+                        </nav>
+                    </header>
+                </div>
+            </div>
+
+
+
+            {/* <div className='sticky top-0 max-w-screen px-4 py-2 mx-auto'>
             <div>
                 <header className="max-w-screen-xl mx-auto">
                     <nav className="px-4">
@@ -124,7 +125,7 @@ const TrendingRepo = () => {
         </div> */}
 
         {/*Hero*/}
-        <section className="bg-gray-900" style={{borderRadius:"0 0 0.75rem 0.75rem"}}>
+        <section className="bg-gray-900 rounded-b-xl">
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto">
                 <div className="mr-auto">
                     <h1 className="max-w-2xl mb-4 text-6xl text-white font-extrabold tracking-tight leading-none">Stay up to date with the latest in <a className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">free coding resources.</a></h1>
@@ -149,14 +150,21 @@ const TrendingRepo = () => {
                             </dl>
                         </div>
                     </section>
-
-
-                    <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-800 duration-300">
-                        Get started
-                    </a>
+                        <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-800 duration-300">
+                            Get started
+                        </a>
+                    </div>
                 </div>
+            </section>
+            <br />
+            <div>
+                <label className='max-w-2xl pl-24'>
+                    Refine by Language:
+                    <select className="bg-blue-600 rounded-lg text-white" name="lang-dropdown" value={lang} onChange={handleLangChange}>
+                        {options.map((option) => (<option value={option.value}>{option.label}</option>))}
+                    </select>
+                </label>
             </div>
-        </section>
 
             {/* TODO: Refactor this out */}
             {error ? <h2>Error happened{error}</h2> :
