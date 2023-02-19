@@ -24,7 +24,7 @@ const TrendingRepo = () => {
 
         setIsLoading(true);
         const octokit = new Octokit({
-            auth: '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'
+            // auth: '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'
           });
     
         try {
@@ -71,6 +71,28 @@ const TrendingRepo = () => {
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
     }, [Items]);
+
+    const renderData = (item) => 
+    <div key={item.id} className='flex justify-center items-center'>
+            <div className='mx-max-md'>
+                <div>
+                    <div className="mt-4 px-4 py-2 max-w-md border-2 border-spacing-2 rounded-xl border-solid shadow-md transition:delay-900 ease-in-out hover:drop-shadow-2xl">
+                        <h1 className="text-3xl font-[600] text-gray-800">{item.name}</h1>
+                        <p className="pb-4 leading-none text-gray-900">{item.date}</p>
+                        <div key={item.description}>
+                            <h1>{item.description}</h1>
+                        </div>
+                        <div className="flex items-center pt-4 space-x-4">
+                            <div key={item.html_urll}>
+                                <button type="button" className="px-2 py-1 transition ease-in-out delay-150 rounded-lg text-white bg-blue-500 hover:bg-blue-800 duration-300">
+                                    <a href={item.html_url}>View on Github</a>
+                                </button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
 
 
     return (
