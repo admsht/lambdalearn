@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/lambdalearn/static/css/main.812b9873.css",
-    "main.js": "/lambdalearn/static/js/main.9af573a9.js",
+    "main.js": "/lambdalearn/static/js/main.158fcdba.js",
     "static/js/787.62f3bb29.chunk.js": "/lambdalearn/static/js/787.62f3bb29.chunk.js",
     "index.html": "/lambdalearn/index.html",
     "main.812b9873.css.map": "/lambdalearn/static/css/main.812b9873.css.map",
-    "main.9af573a9.js.map": "/lambdalearn/static/js/main.9af573a9.js.map",
+    "main.158fcdba.js.map": "/lambdalearn/static/js/main.158fcdba.js.map",
     "787.62f3bb29.chunk.js.map": "/lambdalearn/static/js/787.62f3bb29.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.812b9873.css",
-    "static/js/main.9af573a9.js"
+    "static/js/main.158fcdba.js"
   ]
 }
