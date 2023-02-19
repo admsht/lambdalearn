@@ -24,7 +24,7 @@ const TrendingRepo = () => {
 
         setIsLoading(true);
         const octokit = new Octokit({
-            auth: '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'
+            auth: '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'
           });
     
         try {
