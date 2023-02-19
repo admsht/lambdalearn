@@ -14,7 +14,6 @@ root.render(
   <React.StrictMode>
     <Header />
     <Hero />
-    <App />
     <TrendingRepo />
   </React.StrictMode>
 );
