@@ -7,7 +7,7 @@ const TrendingRepo = () => {
 
     const callRestApi = async () => {
         const octokit = new Octokit({
-            auth: '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'
+            auth: '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'
         });
 
         try {
@@ -25,8 +25,7 @@ const TrendingRepo = () => {
     }, []);
 
     const renderData = (item) =>
-
-        <div class="flex justify-items-center">
+        <div className='flex justify-center items-center'>
             <div className='mx-max-md'>
                 <div key={item.id}>
                     <div className="mt-4 px-4 py-2 max-w-md border-2 border-spacing-2 rounded-xl border-solid shadow-md transition:delay-900 ease-in-out hover:drop-shadow-2xl">
@@ -42,9 +41,9 @@ const TrendingRepo = () => {
                                 </button>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
 
 

@@ -1,6 +1,6 @@
 function Hero() {
     return (
-        <section className="bg-gray-900 h-screen">
+        <section className="bg-gray-900 rounded-b-3xl">
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto">
                 <div className="mr-auto">
                     <h1 className="max-w-2xl mb-4 text-6xl text-white font-extrabold tracking-tight leading-none">Stay up to date with the latest in <a className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">free coding resources.</a></h1>
