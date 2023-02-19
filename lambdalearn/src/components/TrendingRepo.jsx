@@ -23,7 +23,7 @@ const TrendingRepo = () => {
 
         setIsLoading(true);
         const octokit = new Octokit({
-            auth: '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'
+            auth: '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'
           });
     
         try {
@@ -97,12 +97,7 @@ const TrendingRepo = () => {
     return (
         <>
         {/* Header */}
-        <div className='sticky top-0 max-w-screen px-4 py-2 mx-auto'>
-            <div>
-                <header className="max-w-screen-xl mx-auto">
-                    <nav className="px-4">
-                        <div className="flow-root mx-auto max-w-screen-xl">
-                            <a href="https://google.com" className="flex items-center">
+         <a href="https://google.com" className="flex items-center">
                                 <span className="pt-2 self-center text-gray-900 text-2xl font-bold">Lambda Learn</span>
                             </a>
                             <div class="float-right justify-right font-semibold py-2 px-4 border border-blue-500 rounded">
@@ -113,11 +108,17 @@ const TrendingRepo = () => {
                             </select>
                             </label>
                             </div>
+        {/* <div className='sticky top-0 max-w-screen px-4 py-2 mx-auto'>
+            <div>
+                <header className="max-w-screen-xl mx-auto">
+                    <nav className="px-4">
+                        <div className="flow-root mx-auto max-w-screen-xl">
+                            </div>
                         </div>
                     </nav>
                 </header>
             </div>
-        </div>
+        </div> */}
 
         {/*Hero*/}
         <section className="bg-gray-900 rounded-xl">
