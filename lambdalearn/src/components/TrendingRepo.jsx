@@ -24,7 +24,7 @@ const TrendingRepo = () => {
 
         setIsLoading(true);
         const octokit = new Octokit({
-            // auth: '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'
+            auth: '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'
           });
     
         try {
@@ -98,10 +98,11 @@ const TrendingRepo = () => {
     return (
         <>
         {/* Header */}
-         <a href="https://google.com" className="flex items-center">
-                                <span className="pt-2 self-center text-gray-900 text-2xl font-bold">Lambda Learn</span>
-                            </a>
-                            <div class="float-right justify-right font-semibold py-2 px-4 border border-blue-500 rounded">
+        <div className="bg-gray-900" style={{display:"flex",justifyContent:"space-between",position:"sticky"}}>
+                       <div style={{backgroundColor:"blue"}}> 
+                        Lambda Learn
+                        </div>
+                            <div style={{backgroundColor:"green",padding:"12px"}}>
                             <label>
                             Language
                            <select style={{paddingBottom:"24px"}}  name="lang-dropdown" value={lang} onChange={handleLangChange}>
@@ -109,6 +110,7 @@ const TrendingRepo = () => {
                             </select>
                             </label>
                             </div>
+        </div>
         {/* <div className='sticky top-0 max-w-screen px-4 py-2 mx-auto'>
             <div>
                 <header className="max-w-screen-xl mx-auto">
@@ -122,7 +124,7 @@ const TrendingRepo = () => {
         </div> */}
 
         {/*Hero*/}
-        <section className="bg-gray-900 rounded-xl">
+        <section className="bg-gray-900" style={{borderRadius:"0 0 0.75rem 0.75rem"}}>
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto">
                 <div className="mr-auto">
                     <h1 className="max-w-2xl mb-4 text-6xl text-white font-extrabold tracking-tight leading-none">Stay up to date with the latest in <a className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">free coding resources.</a></h1>
