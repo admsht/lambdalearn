@@ -70,55 +70,6 @@ const TrendingRepo = () => {
 
 
     const renderData = (item) =>
-        // Header
-        <div>
-            <div className='sticky top-0 max-w-screen px-4 py-2 mx-auto'>
-                <div>
-                    <header className="max-w-screen-xl mx-auto">
-                        <nav className="px-4">
-                            <div className="flow-root mx-auto max-w-screen-xl">
-                                <a className="flex items-center pt-2 self-center text-gray-900 text-2xl font-bold">Lambda Learn</a>
-                            </div>
-                            <button class="float-right bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                                Button
-                            </button>
-                        </nav>
-                    </header>
-                </div>
-            </div>
-
-
-            <section className="bg-gray-900 rounded-xl">
-                <div className="grid max-w-screen-xl px-4 py-8 mx-auto">
-                    <div className="mr-auto">
-                        <h1 className="max-w-2xl mb-4 text-6xl text-white font-extrabold tracking-tight leading-none">Stay up to date with the latest in <a className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">free coding resources.</a></h1>
-                        <p className="max-w-2xl mb-6 font-light text-xl text-gray-300">Trending free-to-use resource GitHub repositories for learning software development, updated every week.</p>
-                        <section class="bg-gray-900">
-                            <div class="px-4 py-8 text-left">
-                                <dl class="flex gap-8 mx-auto text-gray-100">
-                                    <div class="flex flex-col items-center justify-center">
-                                        <a class="mb-2 text-3xl md:text-4xl font-extrabold">372 M</a>
-                                        <a class="font-light text-gray-300">github repos</a>
-                                    </div>
-                                    <div class="flex flex-col items-center justify-center">
-                                        <a class="mb-2 text-3xl md:text-4xl font-extrabold">201</a>
-                                        <a class="font-light text-gray-300">relevant queries</a>
-                                    </div>
-                                    <div class="flex flex-col items-center justify-center">
-                                        <a class="mb-2 text-3xl md:text-4xl font-extrabold">5</a>
-                                        <a class="font-light text-gray-300">trending repos</a>
-                                    </div>
-                                </dl>
-                            </div>
-                        </section>
-                        <a href="#" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-800 duration-300">
-                            Get started
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-
             <div key={item.id} className='flex justify-center items-center'>
                 <div className='mx-max-md'>
                     <div>
@@ -139,7 +90,6 @@ const TrendingRepo = () => {
                     </div>
                 </div>
             </div>
-        </div>
 
     return (
         <>
