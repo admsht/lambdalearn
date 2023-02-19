@@ -1,39 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import { Octokit } from '@octokit/core';
 
-// const restEndpoint = "https://api.github.com/users/admsht/repos";
-
-const callRestApi = async () => {
-    const octokit = new Octokit({
-        auth: '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'
-      });
-    
-    const response = await octokit.request('GET /search/repositories', {q:"learning&awesome+language:javascript"});
-    // const jsonResponse = await response.json();
-    console.log(response.data);
-    // return JSON.stringify(jsonResponse);
-};
 
 const TrendingRepo = () => {
+    const [data, setdata] = useState([]);
+    const [error, setError] = useState(null);
     
+    const callRestApi = async () => {
+        const octokit = new Octokit({
+            auth: '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'
+          });
+    
+        try {
+         const response = await octokit.request('GET /search/repositories', {q:"learn&code in:readme+language:javascript",sort:"stars",order:"desc",per_page:10});
+         if(response.status !== 200) throw Error("Not succesful request");   
+         setdata(response.data.items);
+        } catch (e) {
+            console.log(e);
+            setError(e.toString());
+        }
+    };
+
+    useEffect(() => {
         callRestApi();
-        return (
-            <div>
-                <h1>React App</h1>
-            </div>
+    }, []);
+
+    const renderData = (item) => <div key={item.id}>
+    <h1>{item.name}</h1>
+</div>;
+    
+        return ( 
+          <>
+            {error? <h2>Error happened{error}</h2> : 
+             data.map(val => renderData(val))}
+           </>
         );
     };
 
 export default TrendingRepo;
-
-
-
-
-    // function RenderResult() {
-    //     const [apiResponse, setApiResponse] = useState("*** now loading ***");
-    
-    //     useEffect(() => {
-    //         callRestApi().then(
-    //             result => setApiResponse(result));
-    //     }, []);
-    // }
