@@ -8,6 +8,7 @@ const TrendingRepo = () => {
     const [pagesRemainig, setPagesRemainig] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [lang, setLang] = useState('javascript');
+    const [isLangChanged, setIsLangChanged] = useState(false);
 
     //dropdown options
     const options = [
@@ -23,7 +24,7 @@ const TrendingRepo = () => {
 
         setIsLoading(true);
         const octokit = new Octokit({
-            auth: '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'
+            auth: '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'
           });
     
         try {
@@ -59,11 +60,12 @@ const TrendingRepo = () => {
         setLang(event.target.value);
         setPage(1);
         setItems([]);
+        setIsLangChanged(true);
     }
 
     useEffect(() => {
         callRestApi();
-    }, [page]);
+    }, [page,isLangChanged]);
 
     useEffect(() => {
         window.addEventListener('scroll', onScroll);
