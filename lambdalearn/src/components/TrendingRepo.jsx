@@ -57,6 +57,8 @@ const TrendingRepo = () => {
 
     function handleLangChange(event){
         setLang(event.target.value);
+        setPage(1);
+        setItems([]);
     }
 
     useEffect(() => {
@@ -103,9 +105,14 @@ const TrendingRepo = () => {
                             <a href="https://google.com" className="flex items-center">
                                 <span className="pt-2 self-center text-gray-900 text-2xl font-bold">Lambda Learn</span>
                             </a>
-                            <button class="float-right justify-right bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-                            Button
-                            </button>
+                            <div class="float-right justify-right font-semibold py-2 px-4 border border-blue-500 rounded">
+                            <label>
+                            Language
+                           <select style={{paddingBottom:"24px"}}  name="lang-dropdown" value={lang} onChange={handleLangChange}>
+                             {options.map((option)=> (<option value={option.value}>{option.label}</option>))}
+                            </select>
+                            </label>
+                            </div>
                         </div>
                     </nav>
                 </header>
@@ -146,12 +153,6 @@ const TrendingRepo = () => {
         </section>
 
         {/* Cards list*/}
-        <label>
-            Language
-            <select style={{paddingBottom:"24px"}}  name="lang-dropdown" value={lang} onChange={handleLangChange}>
-                {options.map((option)=> (<option value={option.value}>{option.label}</option>))}
-            </select>
-        </label>
             {error ? <h2>Error happened{error}</h2> :
                 Items.map(val => renderData(val))}
 
