@@ -3,7 +3,7 @@ function Hero() {
         <section className="bg-gray-900 h-screen">
             <div className="grid max-w-screen-xl px-4 py-8 mx-auto">
                 <div className="mr-auto">
-                    <h1 className="max-w-2xl mb-4 text-6xl text-white font-extrabold tracking-tight leading-none">Stay up to date with the latest in free coding resources.</h1>
+                    <h1 className="max-w-2xl mb-4 text-6xl text-white font-extrabold tracking-tight leading-none">Stay up to date with the latest in <a className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-500">free coding resources.</a></h1>
                     <p className="max-w-2xl mb-6 font-light text-xl text-gray-300">Trending free-to-use resource GitHub repositories for learning software development, updated every week.</p>
 
 
